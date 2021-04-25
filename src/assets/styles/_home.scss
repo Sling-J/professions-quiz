@@ -1,0 +1,127 @@
+@import "partials";
+
+.home-header {
+   height: 100vh;
+   background: url("../images/bg.jpg") no-repeat;
+   background-size: cover;
+   color: #ffffff;
+
+   .home-header__content {
+      @include center;
+
+      margin-top: 20%;
+
+      .home-header-content__title {
+         font-size: 4em;
+         color: #ffffff;
+         font-weight: 400;
+      }
+
+      .home-header-content__desc {
+         font-size: 1.4em;
+         margin: 10px 0;
+      }
+
+      .home-header-content__button {
+         @include center;
+         border-radius: 2px;
+         background: $primary-red;
+         border: none;
+         height: 40px;
+         padding: 0 25px;
+         outline: none;
+         color: #ffffff;
+         transition: all 0.3s;
+         cursor: pointer;
+
+         &:hover {
+            color: #ffffff;
+            background: darken($primary-red, 5%);
+         }
+      }
+   }
+}
+
+.home-about {
+   padding: 86px 0;
+   background: #F9FAFF;
+
+   .home-about-content {
+      .home-about-content__img {
+         width: 48%;
+
+         img {
+            width: 100%;
+         }
+      }
+
+      .home-about-content__info {
+         width: 48%;
+
+         .home-about-content-info__title {
+            color: $primary-red;
+         }
+
+         .home-about-content-info__desc {
+            margin: 20px 0;
+            color: $text-color;
+         }
+
+         .home-about-content-info__button {
+            @include center;
+            border-radius: 2px;
+            background: $primary-red;
+            border: none;
+            height: 40px;
+            padding: 0 25px;
+            outline: none;
+            color: #ffffff;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+               color: #ffffff;
+               background: darken($primary-red, 5%);
+            }
+         }
+      }
+   }
+}
+
+.home-features {
+   padding: 86px 0;
+   background: #141B25;
+
+   .home-features-content {
+      .home-features-content__title {
+         color: #ffffff;
+      }
+
+      .home-features-content__desc {
+         color: #999999;
+         margin-top: 20px;
+      }
+   }
+
+   .home-features-list {
+      margin: 50px 0;
+
+      .home-features-list__item {
+         width: 31%;
+
+         .home-features-list-item__icon {
+            font-size: 3.5em;
+            color: #ffffff;
+         }
+
+         .home-features-list-item__text {
+            color: #999999;
+            margin-top: 10px;
+         }
+      }
+   }
+
+   .home-features-button {
+      @include center;
+   }
+}

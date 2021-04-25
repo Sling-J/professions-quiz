@@ -1,0 +1,55 @@
+$primary-red: #DB0044;
+$primary-blue: #1890FF;
+$text-color: #616161;
+
+@mixin center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.flex {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+}
+
+.flex-wrap {
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+}
+
+.justify-sb {
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+}
+
+.justify-fd {
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: flex-end;
+}
+
+.justify-se {
+   justify-content: space-evenly;
+}
+
+.justify-center {
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+}
+
+.flex-align-center {
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+
+.flex-align-bottom {
+   -webkit-box-align: end;
+   -ms-flex-align: end;
+   align-items: flex-end;
+}

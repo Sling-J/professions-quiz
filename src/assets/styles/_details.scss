@@ -1,0 +1,31 @@
+@import "partials";
+
+.details {
+   .details-header {
+      background: url("../images/bg.jpg") no-repeat;
+      background-size: cover;
+      color: #ffffff;
+      padding-bottom: 86px;
+
+      .details-header-content {
+         margin-top: 86px;
+         text-align: center;
+
+         .details-header-content__title {
+            font-size: 3em;
+            color: #ffffff;
+            font-weight: 400;
+         }
+      }
+   }
+
+   .home-about,
+   .home-features {
+      background: #ffffff;
+
+      .home-features-content__title,
+      .home-features-list-item__icon {
+         color: $primary-blue !important;
+      }
+   }
+}

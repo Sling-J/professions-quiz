@@ -1,0 +1,30 @@
+.navigation {
+   padding-top: 30px;
+
+   .navigation-logo {
+      color: #fff;
+      font-size: 24px;
+   }
+
+   .navigation-menu {
+      .navigation-menu__item {
+         display: block;
+         color: #ffffff;
+         margin-right: 40px;
+         transition: all 0.3s;
+         border-bottom: 2px solid transparent;
+
+         &:last-child {
+            margin-right: 0;
+         }
+
+         &:hover {
+            border-color: #ffffff;
+         }
+      }
+
+      .navigation-menu__item-active {
+         border-bottom: 2px solid #ffffff;
+      }
+   }
+}
