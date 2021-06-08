@@ -2,10 +2,11 @@ import React from 'react';
 
 import {Switch, Route, Redirect} from 'react-router-dom'
 
-import Home from "../pages/Home/Home";
-import About from "../pages/About/About";
-import Features from "../pages/Features/Features";
-import Test from "../pages/Test/Test";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Features from "./pages/Features/Features";
+import Test from "./pages/Test/Test";
+import Professions from "./pages/Professions/Professions";
 
 const Root = () => (
   <Switch>
@@ -33,6 +34,11 @@ const Root = () => (
       exact
       path='/test'
       component={Test}
+    />
+    <Route
+      exact
+      path='/professions'
+      component={Professions}
     />
   </Switch>
 );

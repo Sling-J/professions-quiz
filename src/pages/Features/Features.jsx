@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navigation from "../../components/navigation/Navigation";
 
-import { LikeOutlined, FileDoneOutlined, TeamOutlined } from '@ant-design/icons'
+import { LikeOutlined, FileDoneOutlined, TeamOutlined } from '@ant-design/icons';
 import {Button} from "antd";
 
 const Features = () => {

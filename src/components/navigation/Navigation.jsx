@@ -32,6 +32,13 @@ const Navigation = () => {
           Особенности
         </NavLink>
         <NavLink
+           className='navigation-menu__item'
+           activeClassName='navigation-menu__item-active'
+           to='/professions'
+        >
+          Профессии
+        </NavLink>
+        <NavLink
           className='navigation-menu__item'
           activeClassName='navigation-menu__item-active'
           to='/test'

@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Navigation from "../../components/navigation/Navigation";
 
 import {Button} from "antd";
+import {getTests, checkResult} from "../../services";
 
 const res = [
   {
@@ -146,18 +147,35 @@ const res = [
 const Test = () => {
   const [currentSection, setCurrentSection] = useState('FIRST');
   const [data, setData] = useState([]);
-  const [result, setResult] = useState(null);
 
   useEffect(() => {
-    if (res.length !== 0) {
-      setData(res.map(item => ({
-        ...item,
-        questions: item.questions.map(question => ({
-          ...question,
-          answer: null
-        }))
-      })))
-    }
+    // fetch('url')
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     if (data.result.length !== 0) {
+    //       setData(data.result.map(item => ({
+    //         ...item,
+    //         questions: item.questions.map(question => ({
+    //           ...question,
+    //           answer: null
+    //         }))
+    //       })))
+    //     }
+    //   })
+    //   .catch(err => console.log(err))
+
+    getTests()
+      .then(res => {
+        if (res.result.length !== 0) {
+          setData(res.result.map(item => ({
+            ...item,
+            questions: item.questions.map(question => ({
+              ...question,
+              answer: null
+            }))
+          })))
+        }
+      })
   }, []);
 
   const onChangeSection = () => {
@@ -171,12 +189,22 @@ const Test = () => {
         option: question.answer
       });
 
-      setResult({
+      const requestData = {
         FIRST: data.find(item => item.sectionName === 'FIRST')?.questions.map(mapResult),
         SECOND: data.find(item => item.sectionName === 'SECOND')?.questions.map(mapResult),
-        THIRD: data.find(item => item.sectionName === 'THIRD')?.questions.map(mapResult),
-        FOURTH: data.find(item => item.sectionName === 'FOURTH')?.questions.map(mapResult),
-      });
+      }
+
+      checkResult(requestData)
+        .then(res => console.log(res.result))
+        .catch(err => console.log(err))
+
+      // fetch('url', {
+      //   method: 'POST',
+      //   body: requestData
+      // })
+      //   .then(res => res.json())
+      //   .then(data => console.log(data.result))
+      //   .catch(err => console.log(err))
     }
   };
 

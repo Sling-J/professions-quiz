@@ -1,3 +1,4 @@
+@import "professions";
 @import "navigation";
 @import "partials";
 @import "details";
@@ -16,7 +17,7 @@ body {
 
 h1, h2, h3,
 h4, h5, h6,
-p, ul, li, button {
+p, button {
    padding: 0;
    margin: 0;
    list-style: none;

@@ -1,0 +1,22 @@
+@import "partials";
+
+.professions {
+  padding: 86px 0;
+
+  .professions-content__title {
+    margin-bottom: 20px;
+  }
+
+  .ant-tabs-nav-list {
+    div {
+      font-size: 16px;
+    }
+  }
+
+  .professions-content__list {
+    li {
+      margin-bottom: 16px;
+      font-size: 1.1em;
+    }
+  }
+}

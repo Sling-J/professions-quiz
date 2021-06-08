@@ -15,7 +15,7 @@ const Home = () => {
 
           <div className='home-header__content'>
             <h1 className="home-header-content__title">
-              grothix
+              growthix
             </h1>
 
             <p className="home-header-content__desc">
